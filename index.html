@@ -1,139 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>Counter-Strike – Ciekawostki</title>
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        color: #fff;
-    }
-
-    header {
-        text-align: center;
-        padding: 30px;
-        background: rgba(0,0,0,0.5);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 36px;
-    }
-
-    .buttons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin: 30px;
-        flex-wrap: wrap;
-    }
-
-    button {
-        padding: 15px 25px;
-        border: none;
-        border-radius: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        background: #ff9800;
-        color: #000;
-        transition: 0.3s;
-        font-weight: bold;
-    }
-
-    button:hover {
-        background: #ffc107;
-        transform: scale(1.05);
-    }
-
-    .content {
-        max-width: 900px;
-        margin: auto;
-        background: rgba(0,0,0,0.6);
-        padding: 25px;
-        border-radius: 15px;
-        display: none;
-        animation: fadeIn 0.4s ease-in-out;
-    }
-
-    .content h2 {
-        color: #ff9800;
-    }
-
-    ul li {
-        margin-bottom: 10px;
-        line-height: 1.5;
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0; transform: translateY(10px);}
-        to {opacity: 1; transform: translateY(0);}
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-        font-size: 14px;
-        opacity: 0.7;
-    }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSWIKI — ciekawostki i poradniki</title>
+  <meta name="description" content="CSWIKI — zbiór ciekawostek, praktycznych poradników i lifehacków. Przydatne treści w przejrzystej formie." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="CSWIKI — strona główna">
+        <span class="logo-mark">CS</span><span class="logo-text">WIKI</span>
+      </a>
 
-<header>
-    <h1>🎯 Counter-Strike – Ciekawostki i Poradnik</h1>
-    <p>CS 1.6 / CS:GO / CS2</p>
-</header>
+      <nav class="main-nav" aria-label="Nawigacja główna">
+        <a href="#ciekawostki">Ciekawostki</a>
+        <a href="#poradniki">Poradniki</a>
+        <a href="#lifehacki">Lifehacki</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
 
-<div class="buttons">
-    <button onclick="showSection('facts')">📌 Ciekawostki</button>
-    <button onclick="showSection('guide')">🎓 Poradnik</button>
-</div>
+      <div class="header-controls">
+        <button id="themeToggle" class="btn icon-btn" aria-label="Przełącz motyw">🌙</button>
+        <button id="menuToggle" class="btn icon-btn mobile-only" aria-label="Otwórz menu">☰</button>
+      </div>
+    </div>
 
-<div id="facts" class="content">
-    <h2>🔥 10 ciekawostek o Counter-Strike</h2>
-    <ul>
-        <li>1. Counter-Strike zaczynał jako mod do Half-Life w 1999 roku.</li>
-        <li>2. Twórcami CS byli Minh „Gooseman” Le i Jess Cliffe.</li>
-        <li>3. Mapa de_dust2 jest jedną z najczęściej granych map w historii gier.</li>
-        <li>4. Dźwięk podkładania bomby zna prawie każdy gracz FPS.</li>
-        <li>5. CS:GO w 2018 roku przeszedł na model free-to-play.</li>
-        <li>6. Skiny do broni potrafią być warte setki tysięcy dolarów.</li>
-        <li>7. E-sport CS ma jedne z największych turniejów na świecie.</li>
-        <li>8. Granaty dymne w CS2 używają fizyki wolumetrycznej.</li>
-        <li>9. Recoil w CS jest zawsze taki sam – da się go wyuczyć.</li>
-        <li>10. CS 1.6 do dziś ma aktywną społeczność.</li>
-    </ul>
-</div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#ciekawostki">Ciekawostki</a>
+      <a href="#poradniki">Poradniki</a>
+      <a href="#lifehacki">Lifehacki</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </header>
 
-<div id="guide" class="content">
-    <h2>🎯 Poradnik – Jak lepiej grać w CS</h2>
-    <ul>
-        <li><b>1. Celowanie:</b> Zawsze trzymaj celownik na wysokości głowy.</li>
-        <li><b>2. Recoil:</b> Naucz się spray patternów najpopularniejszych broni.</li>
-        <li><b>3. Granaty:</b> Smoke i flash często wygrywają rundy.</li>
-        <li><b>4. Ekonomia:</b> Nie kupuj co rundę – graj eco, gdy trzeba.</li>
-        <li><b>5. Dźwięk:</b> Słuchawki są ważniejsze niż grafika.</li>
-        <li><b>6. Pozycjonowanie:</b> Nie stój zawsze w tym samym miejscu.</li>
-        <li><b>7. Spokój:</b> Nie tiltuj – CS to gra mentalna.</li>
-    </ul>
-</div>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>CSWIKI — ciekawostki i praktyczne poradniki</h1>
+          <p>Krótko, zwięźle i praktycznie — odkrywaj ciekawostki, ucz się nowych umiejętności i rozwiązuj codzienne problemy.</p>
 
-<footer>
-    © 2025 | Strona fanowska Counter-Strike
-</footer>
+          <div class="hero-actions">
+            <input id="searchInput" class="search" type="search" placeholder="Szukaj artykułów, porad..." aria-label="Szukaj artykułów" />
+            <button id="searchBtn" class="btn primary">Szukaj</button>
+          </div>
 
-<script>
-function showSection(id) {
-    document.querySelectorAll('.content').forEach(div => {
-        div.style.display = 'none';
-    });
-    document.getElementById(id).style.display = 'block';
-}
-</script>
+          <div class="hero-tags">
+            Popularne: <button class="tag">Astronomia</button> <button class="tag">Poradnik</button> <button class="tag">Technologie</button>
+          </div>
+        </div>
 
+        <div class="hero-visual" aria-hidden="true">
+          <svg width="360" height="240" viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect rx="16" width="360" height="240" fill="url(#g)"/>
+            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6C8CF5"/><stop offset="1" stop-color="#68E1C0"/></linearGradient></defs>
+            <g opacity="0.9"><text x="20" y="40" font-size="24" fill="white">CSWIKI</text></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="container section">
+      <h2>Polecane artykuły</h2>
+      <div id="cards" class="cards-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="ciekawostki" class="container section">
+      <h2>Ciekawostki</h2>
+      <p class="muted">Krótko, zaskakująco i z humorem.</p>
+      <div class="cards-grid" id="tipsGrid"></div>
+    </section>
+
+    <section id="poradniki" class="container section">
+      <h2>Poradniki</h2>
+      <p class="muted">Krok po kroku — instrukcje, które działają.</p>
+      <div class="cards-grid" id="guidesGrid"></div>
+    </section>
+
+    <section id="lifehacki" class="container section">
+      <h2>Lifehacki</h2>
+      <p class="muted">Szybkie triki na codzienne problemy.</p>
+      <div class="cards-grid" id="lifeGrid"></div>
+    </section>
+
+    <section id="newsletter" class="container section newsletter">
+      <h3>Zapisz się do newslettera</h3>
+      <p class="muted">Raz w tygodniu najlepsze treści prosto na maila.</p>
+      <form id="newsletterForm" class="form-inline" aria-label="Formularz zapisu do newslettera">
+        <input id="emailInput" type="email" placeholder="Twój email" required />
+        <button class="btn">Zapisz się</button>
+      </form>
+      <p id="newsletterMsg" class="muted small"></p>
+    </section>
+
+    <section id="kontakt" class="container section">
+      <h2>Kontakt</h2>
+      <p class="muted">Masz pomysł na artykuł? Napisz.</p>
+      <address>
+        <a href="mailto:kontakt@cswiki.example">kontakt@cswiki.example</a>
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> CSWIKI — Wszystkie prawa zastrzeżone.</p>
+      <p class="muted">Projekt i implementacja — CSWIKI Starter</p>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button id="modalClose" class="btn icon-btn modal-close" aria-label="Zamknij">✕</button>
+      <article id="modalArticle"></article>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

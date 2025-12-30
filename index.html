@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Counter-Strike – Ciekawostki</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #fff;
+    }
+
+    header {
+        text-align: center;
+        padding: 30px;
+        background: rgba(0,0,0,0.5);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 30px;
+        flex-wrap: wrap;
+    }
+
+    button {
+        padding: 15px 25px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #ff9800;
+        color: #000;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background: #ffc107;
+        transform: scale(1.05);
+    }
+
+    .content {
+        max-width: 900px;
+        margin: auto;
+        background: rgba(0,0,0,0.6);
+        padding: 25px;
+        border-radius: 15px;
+        display: none;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .content h2 {
+        color: #ff9800;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(10px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🎯 Counter-Strike – Ciekawostki i Poradnik</h1>
+    <p>CS 1.6 / CS:GO / CS2</p>
+</header>
+
+<div class="buttons">
+    <button onclick="showSection('facts')">📌 Ciekawostki</button>
+    <button onclick="showSection('guide')">🎓 Poradnik</button>
+</div>
+
+<div id="facts" class="content">
+    <h2>🔥 10 ciekawostek o Counter-Strike</h2>
+    <ul>
+        <li>1. Counter-Strike zaczynał jako mod do Half-Life w 1999 roku.</li>
+        <li>2. Twórcami CS byli Minh „Gooseman” Le i Jess Cliffe.</li>
+        <li>3. Mapa de_dust2 jest jedną z najczęściej granych map w historii gier.</li>
+        <li>4. Dźwięk podkładania bomby zna prawie każdy gracz FPS.</li>
+        <li>5. CS:GO w 2018 roku przeszedł na model free-to-play.</li>
+        <li>6. Skiny do broni potrafią być warte setki tysięcy dolarów.</li>
+        <li>7. E-sport CS ma jedne z największych turniejów na świecie.</li>
+        <li>8. Granaty dymne w CS2 używają fizyki wolumetrycznej.</li>
+        <li>9. Recoil w CS jest zawsze taki sam – da się go wyuczyć.</li>
+        <li>10. CS 1.6 do dziś ma aktywną społeczność.</li>
+    </ul>
+</div>
+
+<div id="guide" class="content">
+    <h2>🎯 Poradnik – Jak lepiej grać w CS</h2>
+    <ul>
+        <li><b>1. Celowanie:</b> Zawsze trzymaj celownik na wysokości głowy.</li>
+        <li><b>2. Recoil:</b> Naucz się spray patternów najpopularniejszych broni.</li>
+        <li><b>3. Granaty:</b> Smoke i flash często wygrywają rundy.</li>
+        <li><b>4. Ekonomia:</b> Nie kupuj co rundę – graj eco, gdy trzeba.</li>
+        <li><b>5. Dźwięk:</b> Słuchawki są ważniejsze niż grafika.</li>
+        <li><b>6. Pozycjonowanie:</b> Nie stój zawsze w tym samym miejscu.</li>
+        <li><b>7. Spokój:</b> Nie tiltuj – CS to gra mentalna.</li>
+    </ul>
+</div>
+
+<footer>
+    © 2025 | Strona fanowska Counter-Strike
+</footer>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.content').forEach(div => {
+        div.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>

@@ -1,116 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CSWIKI — Counter-Strike 2 poradniki i ciekawostki</title>
-  <meta name="description" content="CSWIKI — 20 poradników i 20 ciekawostek o Counter-Strike 2. Linie granatów, taktyki, mechaniki gry i więcej." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🟦</text></svg>">
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <title>CS2 – Błędy, które kosztują rundy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0f172a;
+            color: #e5e7eb;
+        }
+
+        header {
+            background: #020617;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #1e293b;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #38bdf8;
+        }
+
+        header p {
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .mistake {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .mistake h2 {
+            margin-top: 0;
+            color: #f87171;
+        }
+
+        .good {
+            color: #4ade80;
+        }
+
+        .bad {
+            color: #f87171;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#" aria-label="CSWIKI — strona główna">
-        <span class="logo-mark">CS</span><span class="logo-text">WIKI</span>
-      </a>
 
-      <nav class="main-nav" aria-label="Nawigacja główna">
-        <a href="#ciekawostki">Ciekawostki</a>
-        <a href="#poradniki">Poradniki</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
+<header>
+    <h1>CS2 – Błędy, które kosztują rundy</h1>
+    <p>Najczęstsze złe nawyki graczy Counter-Strike 2</p>
+</header>
 
-      <div class="header-controls">
-        <button id="themeToggle" class="btn icon-btn" aria-label="Przełącz motyw">🌙</button>
-        <button id="menuToggle" class="btn icon-btn mobile-only" aria-label="Otwórz menu">☰</button>
-      </div>
+<div class="container">
+
+    <div class="mistake">
+        <h2>❌ Reload po fragu</h2>
+        <p class="bad"><strong>Dlaczego to błąd?</strong>  
+        Przeładowanie po zabiciu często kończy się śmiercią od trade’a.</p>
+
+        <p class="good"><strong>Jak grać lepiej?</strong>  
+        Najpierw sprawdź kolejne kąty, przeładuj dopiero gdy jesteś bezpieczny.</p>
+
+        <p><strong>Tip:</strong> Jeśli masz więcej niż 10 kul – WALCZ.</p>
     </div>
 
-    <div id="mobileMenu" class="mobile-menu">
-      <a href="#ciekawostki">Ciekawostki</a>
-      <a href="#poradniki">Poradniki</a>
-      <a href="#kontakt">Kontakt</a>
+    <div class="mistake">
+        <h2>❌ Peek bez flasha</h2>
+        <p class="bad"><strong>Dlaczego to błąd?</strong>  
+        Dajesz przeciwnikowi czysty pojedynek.</p>
+
+        <p class="good"><strong>Jak grać lepiej?</strong>  
+        Flash = darmowa przewaga. Naucz się jednego prostego.</p>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>CSWIKI — Counter‑Strike 2: poradniki i ciekawostki</h1>
-          <p>20 praktycznych poradników i 20 ciekawostek związanych z CS2 — lineupy granatów, taktyki na mapach (m.in. Dust2), mechaniki i porady dla graczy.</p>
+    <div class="mistake">
+        <h2>❌ Force buy w złej rundzie</h2>
+        <p class="bad"><strong>Dlaczego to błąd?</strong>  
+        Psujesz economy całej drużyny.</p>
 
-          <div class="hero-actions">
-            <input id="searchInput" class="search" type="search" placeholder="Szukaj poradnika lub ciekawostki..." aria-label="Szukaj artykułów" />
-            <button id="searchBtn" class="btn primary">Szukaj</button>
-          </div>
-
-          <div class="hero-tags">
-            Popularne: <button class="tag">Dust2</button> <button class="tag">Lineupy</button> <button class="tag">CT/T</button>
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <svg width="360" height="240" viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect rx="16" width="360" height="240" fill="url(#g)"/>
-            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6C8CF5"/><stop offset="1" stop-color="#68E1C0"/></linearGradient></defs>
-            <g opacity="0.95"><text x="20" y="40" font-size="24" fill="white">CSWIKI • CS2</text></g>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section id="featured" class="container section">
-      <h2>Polecane artykuły</h2>
-      <div id="cards" class="cards-grid" aria-live="polite"></div>
-    </section>
-
-    <section id="ciekawostki" class="container section">
-      <h2>Ciekawostki (CS2)</h2>
-      <p class="muted">Fakty, mechaniki i smaczki ze świata Counter‑Strike 2.</p>
-      <div class="cards-grid" id="tipsGrid"></div>
-    </section>
-
-    <section id="poradniki" class="container section">
-      <h2>Poradniki (CS2)</h2>
-      <p class="muted">Lineupy granatów, podejścia na site'y, obsługa utility i praktyczne ustawienia.</p>
-      <div class="cards-grid" id="guidesGrid"></div>
-    </section>
-
-    <section id="newsletter" class="container section newsletter">
-      <h3>Zapisz się do newslettera</h3>
-      <p class="muted">Powiadomienia o nowych poradnikach i ciekawostkach.</p>
-      <form id="newsletterForm" class="form-inline" aria-label="Formularz zapisu do newslettera">
-        <input id="emailInput" type="email" placeholder="Twój email" required />
-        <button class="btn">Zapisz się</button>
-      </form>
-      <p id="newsletterMsg" class="muted small"></p>
-    </section>
-
-    <section id="kontakt" class="container section">
-      <h2>Kontakt</h2>
-      <p class="muted">Masz pomysł na kolejny poradnik? Napisz.</p>
-      <address>
-        <a href="mailto:kontakt@cswiki.example">kontakt@cswiki.example</a>
-      </address>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> CSWIKI — Wszystkie prawa zastrzeżone.</p>
-      <p class="muted">Strona nie jest oficjalną witryną Valve.</p>
+        <p class="good"><strong>Jak grać lepiej?</strong>  
+        Myśl 2 rundy do przodu, nie tylko o tej jednej.</p>
     </div>
-  </footer>
 
-  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-    <div class="modal-content">
-      <button id="modalClose" class="btn icon-btn modal-close" aria-label="Zamknij">✕</button>
-      <article id="modalArticle"></article>
-    </div>
-  </div>
+</div>
 
-  <script src="app.js"></script>
+<footer>
+    © 2025 CS2 Błędy | Projekt do nauki
+</footer>
+
 </body>
 </html>
